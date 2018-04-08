@@ -27,8 +27,8 @@ MAXVOTESPERWALLET=1
 CHAINBLOCKTIME=16
 CHAINTRANSPERBLOCK=50
 REWARDSTART=75600
-REWARDPERBLOCK=100
-TOTALPREMINE=500000000
+REWARDPERBLOCK=10000000
+TOTALPREMINE=5000000000000000
 
 echo "Beginning ark node installation"
 ~/ark-deployer/bridgechain.sh install-node --name $CHAINNAME --database $DATABASENAME --token $CHAINTOKEN --symbol $CHAINSYMBOL --node-ip $GLOBALIP --explorer-ip $PUBLICIP --forgers $CHAINFORGERS --max-votes $MAXVOTESPERWALLET --blocktime $CHAINBLOCKTIME --transactions-per-block $CHAINTRANSPERBLOCK --reward-height-start $REWARDSTART --reward-per-block $REWARDPERBLOCK --total-premine $TOTALPREMINE --autoinstall-deps --non-interactive

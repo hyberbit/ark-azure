@@ -19,16 +19,16 @@ sudo apt-get install -y jq
 PUBLICIP="$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')"
 GLOBALIP="0.0.0.0"
 CHAINNAME=MyTest
-DATABASENAME=ark_mytest
-CHAINTOKEN=MYTEST
-CHAINSYMBOL=MCT
+DATABASENAME=leg_legion
+CHAINTOKEN=Legion
+CHAINSYMBOL=LEG
 CHAINFORGERS=51
 MAXVOTESPERWALLET=1
-CHAINBLOCKTIME=8
+CHAINBLOCKTIME=16
 CHAINTRANSPERBLOCK=50
 REWARDSTART=75600
-REWARDPERBLOCK=200000000
-TOTALPREMINE=2100000000000000
+REWARDPERBLOCK=100
+TOTALPREMINE=500000000
 
 echo "Beginning ark node installation"
 ~/ark-deployer/bridgechain.sh install-node --name $CHAINNAME --database $DATABASENAME --token $CHAINTOKEN --symbol $CHAINSYMBOL --node-ip $GLOBALIP --explorer-ip $PUBLICIP --forgers $CHAINFORGERS --max-votes $MAXVOTESPERWALLET --blocktime $CHAINBLOCKTIME --transactions-per-block $CHAINTRANSPERBLOCK --reward-height-start $REWARDSTART --reward-per-block $REWARDPERBLOCK --total-premine $TOTALPREMINE --autoinstall-deps --non-interactive

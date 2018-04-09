@@ -16,9 +16,9 @@ nvm install 8.9.1
 sudo apt-get install -y jq
 
 #Variables for installations
-PUBLICIP="35.192.136.166"
-GLOBALIP="35.192.136.166"
-CHAINNAME=MyTest
+PUBLICIP="177.99.2.171"
+GLOBALIP="177.99.2.171"
+CHAINNAME=Legion
 DATABASENAME=leg_legion
 CHAINTOKEN=Legion
 CHAINSYMBOL=LEG

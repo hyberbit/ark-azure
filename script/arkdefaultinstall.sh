@@ -17,7 +17,7 @@ sudo apt-get install -y jq
 
 #Variables for installations
 PUBLICIP="$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')"
-GLOBALIP="0.0.0.0"
+GLOBALIP="179.180.62.129"
 CHAINNAME=Legion
 DATABASENAME=leg_legion
 CHAINTOKEN=Legion

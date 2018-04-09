@@ -16,8 +16,8 @@ nvm install 8.9.1
 sudo apt-get install -y jq
 
 #Variables for installations
-PUBLICIP="$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')"
-GLOBALIP="0.0.0.0"
+PUBLICIP="35.192.136.166"
+GLOBALIP="35.192.136.166"
 CHAINNAME=MyTest
 DATABASENAME=leg_legion
 CHAINTOKEN=Legion

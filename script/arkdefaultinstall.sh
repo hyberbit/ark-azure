@@ -17,7 +17,7 @@ sudo apt-get install -y jq
 
 #Variables for installations
 PUBLICIP="35.196.246.92"
-GLOBALIP="35.196.246.92"
+GLOBALIP="10.142.0.3"
 CHAINNAME=Legion
 DATABASENAME=leg_ON
 CHAINTOKEN=Legion

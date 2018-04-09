@@ -16,10 +16,10 @@ nvm install 8.9.1
 sudo apt-get install -y jq
 
 #Variables for installations
-PUBLICIP="$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')"
-GLOBALIP="179.180.62.129"
+PUBLICIP="35.192.123.110"
+GLOBALIP="35.192.123.110"
 CHAINNAME=Legion
-DATABASENAME=leg_legion
+DATABASENAME=leg_ON
 CHAINTOKEN=Legion
 CHAINSYMBOL=LEG
 CHAINFORGERS=51
@@ -29,9 +29,14 @@ CHAINTRANSPERBLOCK=50
 REWARDSTART=75600
 REWARDPERBLOCK=10000000
 TOTALPREMINE=5000000000000000
+PREFIX=XL
+MAXTOKENSPACC=15000000000000000
+BLOCKTIME=600
+
+
 
 echo "Beginning ark node installation"
-~/ark-deployer/bridgechain.sh install-node --name $CHAINNAME --database $DATABASENAME --token $CHAINTOKEN --symbol $CHAINSYMBOL --node-ip $GLOBALIP --explorer-ip $PUBLICIP --forgers $CHAINFORGERS --max-votes $MAXVOTESPERWALLET --blocktime $CHAINBLOCKTIME --transactions-per-block $CHAINTRANSPERBLOCK --reward-height-start $REWARDSTART --reward-per-block $REWARDPERBLOCK --total-premine $TOTALPREMINE --autoinstall-deps --non-interactive
+~/ark-deployer/bridgechain.sh install-node --name $CHAINNAME --database $DATABASENAME --token $CHAINTOKEN --symbol $CHAINSYMBOL --node-ip $GLOBALIP --explorer-ip $PUBLICIP --forgers $CHAINFORGERS --max-votes $MAXVOTESPERWALLET --blocktime $BLOCKTIME --transactions-per-block $CHAINTRANSPERBLOCK --reward-height-start $REWARDSTART --reward-per-block $REWARDPERBLOCK --total-premine $TOTALPREMINE --max-tokens-per-account $MAXTOKENSPACC --prefix $PREFIX --autoinstall-deps --non-interactive
 
 echo "Start-node for the new bridgechain"
 ~/ark-deployer/bridgechain.sh start-node --name $CHAINNAME --non-interactive
